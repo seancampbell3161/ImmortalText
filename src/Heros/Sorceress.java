@@ -1,9 +1,9 @@
-package Characters;
+package Heros;
 
 import Enemies.Enemy;
 import Skills.Casting;
 
-public class Sorceress extends Character implements Casting {
+public class Sorceress extends Hero implements Casting {
 
     /*
     Constructor initializing stats
@@ -29,8 +29,8 @@ public class Sorceress extends Character implements Casting {
     A method to level up a character - increase stats and give options to allocate skill point
      */
     public void levelUp() {
-        this.setHealth(this.getHealth() + 1);
-        this.setMana(this.getMana() + 2);
+        this.setMaxHealth(this.getMaxHealth() + 1);
+        this.setMaxMana(this.getMaxMana() + 2);
     }
 
     /*
