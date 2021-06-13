@@ -1,24 +1,28 @@
-package Characters;
+package Heros;
 
-public abstract class Character {
+public abstract class Hero {
 
     private String name;
-    private int health, mana, strength, dexterity, vitality, energy, experience;
+    private int maxHealth, maxMana, health, mana, strength, dexterity, vitality, energy, experience;
     int[] levelThresholds = new int[] {50, 100, 200, 350, 500 };
 
-    public Character() {
+    public Hero() {
 
     }
 
-    public Character(String name,
-                     int health,
-                     int mana,
-                     int strength,
-                     int dexterity,
-                     int vitality,
-                     int energy,
-                     int experience) {
+    public Hero(String name,
+                int maxHealth,
+                int maxMana,
+                int health,
+                int mana,
+                int strength,
+                int dexterity,
+                int vitality,
+                int energy,
+                int experience) {
         this.name = name;
+        this.maxHealth = maxHealth;
+        this.maxMana = maxMana;
         this.health = health;
         this.mana = mana;
         this.strength = strength;
@@ -44,6 +48,14 @@ public abstract class Character {
     public void setName(String name) {
         this.name = name;
     }
+
+    public int getMaxHealth() { return maxHealth; }
+
+    public void setMaxHealth(int maxHealth) { this.maxHealth = maxHealth; }
+
+    public int getMaxMana() { return maxMana; }
+
+    public void setMaxMana(int maxMana) { this.maxMana = maxMana; }
 
     public int getHealth() {
         return this.health;
