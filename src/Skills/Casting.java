@@ -1,7 +1,9 @@
+package Skills;
+
 public interface Casting {
 
     /*
-    Sorceress
+    Characters.Sorceress
      */
     int iceBolt();
     int fireBolt();

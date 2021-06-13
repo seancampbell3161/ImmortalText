@@ -1,17 +1,13 @@
+package Characters;
+
+import Enemies.Enemy;
+import Skills.Casting;
+
 public class Sorceress extends Character implements Casting {
 
-
-//    public Sorceress(String name, int health, int mana, int strength, int dexterity, int vitality, int energy) {
-//        super(name, health, mana, strength, dexterity, vitality, energy);
-//        name = "Hero";
-//        health = 40;
-//        mana = 35;
-//        strength = 10;
-//        dexterity = 25;
-//        vitality = 10;
-//        energy = 35;
-//    }
-
+    /*
+    Constructor initializing stats
+     */
     public Sorceress() {
         setName("Hero");
         setHealth(40);
@@ -22,12 +18,20 @@ public class Sorceress extends Character implements Casting {
         setEnergy(35);
     }
 
+    /*
+    A method to increase the exp pool of the user
+     */
+    public void increaseXP(Enemy enemy) {
+        this.setExperience(this.getExperience() + enemy.worth);
+    }
+
+    /*
+    A method to level up a character - increase stats and give options to allocate skill point
+     */
     public void levelUp() {
         this.setHealth(this.getHealth() + 1);
         this.setMana(this.getMana() + 2);
     }
-
-
 
     /*
     Spells

@@ -1,7 +1,10 @@
+package Characters;
+
 public abstract class Character {
 
     private String name;
     private int health, mana, strength, dexterity, vitality, energy, experience;
+    int[] levelThresholds = new int[] {50, 100, 200, 350, 500 };
 
     public Character() {
 
@@ -89,4 +92,8 @@ public abstract class Character {
     public void setEnergy(int eng) {
         this.energy = eng;
     }
+
+    public int getExperience() { return this.experience; }
+
+    public void setExperience(int exp) { this.experience = exp; }
 }
