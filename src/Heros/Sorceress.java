@@ -22,7 +22,7 @@ public class Sorceress extends Hero implements Casting {
     A method to increase the exp pool of the user
      */
     public void increaseXP(Enemy enemy) {
-        this.setExperience(this.getExperience() + enemy.worth);
+        this.setExperience(this.getExperience() + enemy.getWorth());
     }
 
     /*
@@ -49,5 +49,9 @@ public class Sorceress extends Hero implements Casting {
     @Override
     public int fireBolt() {
         return 5 + (this.getEnergy() / 5);
+    }
+
+    public int attack() {
+        return (int) (Math.random() * 3);
     }
 }
