@@ -52,6 +52,6 @@ public class Sorceress extends Hero implements Casting {
     }
 
     public int attack() {
-        return (int) (Math.random() * 3);
+        return (int) (Math.random() * 2 + 1);
     }
 }
